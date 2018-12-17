@@ -1,12 +1,11 @@
 
 ## 개요
 
-이것은 Siraj Raval의 공급망에 관한 유튜브 [비디오](https://youtu.be/vwor9Fva1V4)와 관련된 코드입니다.
+이것은 Siraj Raval의 공급망에 관한 [유튜브 영상](https://youtu.be/vwor9Fva1V4)과 관련된 코드입니다.
 
 Logistics Wizard는 21세기에 새롭게 재해석되는 공급망의 최적화 시스템입니다.
 
-많은 기업들은 공급망 사업 공정을 가동하기 위한 사내의 어플리케이션을 사용하고 있습니다. [전사적 자원 관리]
-(https://en.wikipedia.org/wiki/Enterprise_resource_planning) (ERP) 시스템이 그 중 하나이며 매일 아주 중요한 역할을 담당하고 있습니다.
+많은 기업들은 공급망 사업 공정을 가동하기 위한 사내의 어플리케이션을 사용하고 있습니다. [전사적 자원 관리](https://en.wikipedia.org/wiki/Enterprise_resource_planning)(ERP) 시스템이 그 중 하나이며 매일 아주 중요한 역할을 담당하고 있습니다.
 
 Logistics Wizard는 ERP 시스템의 가동 환경을 시뮬레이션하는 데 목적을 두고 있으며 어플리케이션을 통해 ERP 시스템을 늘려 공급망 관리자의 가시성과 민첩성을 향상시키고 있습니다. 이 경우, ERP 시스템은 실제 ERP 시스템의 극히 일부분을 시현하는 시뮬레이터가 됩니다. 최종 목적은 많은 일반 SaaS 시현 패턴을 공개 전시하는 것입니다. Logistics Wizard는 기업 단계 어플리케이션을 설계할 때 재사용될 수 있는 하이브리드 클라우드, 마이크로 서비스, 빅 데이터 분석 개념을 Bluemix에 전시하고 있습니다.
 
@@ -15,17 +14,16 @@ Logistics Wizard는 ERP 시스템의 가동 환경을 시뮬레이션하는 데 
 
 [![Logistics Wizard on Bluemix](docs/youtube_play.png)](http://www.youtube.com/watch?v=wCxXs83-eRc "Logistics Wizard on Bluemix")
 
-## Logistics Wizard을 체험해 봅시다
+## Logistics Wizard 예제 실행하기
 
-[이 설명](WALKTHROUGH.md) 을 통해 실제로 활용해 봅시다.
+[이 설명](WALKTHROUGH.md)을 통해 실제로 활용해 봅시다.
 
-## Bluemix에 Logistics Wizard를 설치해 봅시다
+## Bluemix에 Logistics Wizard 설치하기
 
 이하의 방법으로 환경을 구축할 수 있습니다:
 
   1. [Logistics Wizard Toolchain][toolchain_github_url]을 통해 어플리케이션을 클라우드 파운드리 마이크로 서비스로서 설치합니다. (권장)
   2. [설명](Deploy_Microservices_Cloud_Foundry_Docker.md)을 따라 ERP와 컨트롤러를 클라우드 파운드리 **도커** 앱으로서 설치합니다.
-  3. Learn more about deploying the ERP & Controller microservices using **Kubernetes** & **Istio** in this [blog](https://www.ibm.com/blogs/bluemix/2017/07/deploy-logistics-wizard-microservices-kubernetes-istio/).
   3. [블로그](https://www.ibm.com/blogs/bluemix/2017/07/deploy-logistics-wizard-microservices-kubernetes-istio/)에서 **Kubernetes**와 **Istio**를 사용한 ERP와 컨트롤러 마이크로서비스 설치에 대해서 더 자세히 알아보세요.
 
 ## 아키텍쳐
@@ -38,11 +36,11 @@ Logistics Wizard는 ERP 시스템의 가동 환경을 시뮬레이션하는 데 
 
 * [logistics-wizard-recommendation][recommendation_github_url] - 현재 날씨 상태에 기초한 수송 권고안을 만들어줍니다. 현재 날씨 상태를 받고 주어진 날씨 이벤트에 따라 새로운 수송 권고를 만드는 Bluemix OpenWhisk의 집합입니다. 이 권고는 실제 오더로 바뀔 수 있습니다.
 
-* [logistics-wizard-controller][controller_github_url] - 서비스 간 상호 작용을 제어하는 메인 컨트롤러처럼 움직입니다. 사용자 인터페이스로부터 요청을 받아 ERP나 날씨 권고 모듈로 전달해줍니다.
+* [logistics-wizard-controller][controller_github_url] - 서비스 간 상호 작용을 제어하는 메인 컨트롤러입니다. 사용자 인터페이스로부터 요청을 받아 ERP나 날씨 권고 모듈로 전달해줍니다.
 
 ![아키텍쳐 도표](architecture.png)
 
-[위키](https://github.com/IBM-Cloud/logistics-wizard/wiki)를 방문하여 Logistics Wizard 아키텍쳐와 설치 전략에 대해 자세히 알아보십시오.
+[위키](https://github.com/IBM-Cloud/logistics-wizard/wiki)를 방문하여 Logistics Wizard 아키텍쳐와 설치 전략에 대해 자세히 알아보세요.
 
 ## 관련 블로그 포스트, 비디오 등
 
