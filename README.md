@@ -7,9 +7,9 @@ Logistics Wizard는 21세기에 새롭게 재해석되는 공급망의 최적화
 
 많은 기업들은 공급망 사업 공정을 가동하기 위한 사내의 어플리케이션을 사용하고 있습니다. [전사적 자원 관리](https://en.wikipedia.org/wiki/Enterprise_resource_planning)(ERP) 시스템이 그 중 하나이며 매일 아주 중요한 역할을 담당하고 있습니다.
 
-Logistics Wizard는 ERP 시스템의 가동 환경을 시뮬레이션하는 데 목적을 두고 있으며 어플리케이션을 통해 ERP 시스템을 늘려 공급망 관리자의 가시성과 민첩성을 향상시키고 있습니다. 이 경우, ERP 시스템은 실제 ERP 시스템의 극히 일부분을 시현하는 시뮬레이터가 됩니다. 최종 목적은 많은 일반 SaaS 시현 패턴을 공개 전시하는 것입니다. Logistics Wizard는 기업 단계 어플리케이션을 설계할 때 재사용될 수 있는 하이브리드 클라우드, 마이크로 서비스, 빅 데이터 분석 개념을 Bluemix에 전시하고 있습니다.
+Logistics Wizard는 ERP 시스템이 돌아가고 있는 환경을 시뮬레이션하는 데 목적을 두고 있으며, 그 ERP 시스템을 보완하여 공급망 관리자의 가시성과 기민함을 향상시키고 있습니다. 본 예제의 ERP 시스템은 실제 ERP 시스템의 중 일부 기능만을 시뮬레이션 하겠습니다. 최종 목적은 몇몇 일반적인 SaaS로 구현된  패턴을 보여주는 것입니다. Logistics Wizard는 하이브리드 클라우드, 마이크로 서비스, 빅 데이터 분석 개요를 보여주는데, 이것들은 Bluemix에서 엔터프라이즈급 어플리케이션을 빌드할 때에도 사용할 수 있습니다.
 
-공급망을 어떻게 더 기민하게 만들 수 있는지를 보여주는 시나리오 중 하나는 악천후를 다루는 것입니다. 물류 센터와 소매 센터가 있고 수송을 진행중인 글로벌 소매 기업의 경우를 생각해보면, 날씨 상태의 변화는 수송에 영향을 주기도 하지만 수익을 증가시킬 수 있는 기회이기도 합니다. 이 날씨 상태의 변화에 반응함으로써 어떻게 공급망을 적응시켜 나갈 수 있을지 생각해보는 것입니다.
+공급망을 어떻게 더 기민하게 만들 수 있는지를 보여주는 시나리오 중 하나는 악천후를 다루는 것입니다. 물류 센터와 소매 센터가 있고 수송이 진행 중인 글로벌 소매 기업의 경우를 생각해보면, 날씨 변화는 수송에 영향을 주기도 하지만 수익을 증가시킬 수 있는 기회이기도 합니다. 이 날씨 변화에 대응하여 어떻게 공급망을 적응시켜 나갈 수 있을지 생각해보는 것입니다.
 
 
 [![Logistics Wizard on Bluemix](docs/youtube_play.png)](http://www.youtube.com/watch?v=wCxXs83-eRc "Logistics Wizard on Bluemix")
@@ -32,11 +32,11 @@ Logistics Wizard는 ERP 시스템의 가동 환경을 시뮬레이션하는 데 
 
 * [logistics-wizard-erp][erp_github_url] - Logistics Wizards에 쓰이는 API를 정의하여 ERP 시스템의 데이터에 접근합니다. 또한 시뮬레이터로 쓰일 수 있도록 하는 기본 구현도 제공해줍니다. 시뮬레이터는 PostgreSQL 데이터베이스와 연결된 Node.js 어프리케이션입니다. 이 프로젝트는 API를 통해 사용자 (공급망 관리자와 소매 센터 관리자), 물류 센터, 소매 센터, 그리고 수송을 관리합니다.
 
-* [logistics-wizard-webui][webui_github_url] - 진행중인 수송과 경고를 볼 수 있는 대시보드를 제공합니다. 설치된 어플리케이션을 이용하는 데 로그인이나 자격 등이 필요하지 않습니다. 대신 신규 사용자 모두를 위한 데모 ID가 제공됩니다. 각 데모 ID마다 Logistics Wizard의 환경이 따로 제공되며, 비즈니스 사용자와 물류 센터, 소매 센터, 수송은 기본값으로 설정됩니다. [안내](WALKTHROUGH.md)를 참조하여 역량을 확인해 보세요.
+* [logistics-wizard-webui][webui_github_url] - 진행중인 수송과 경고 메시지를 볼 수 있는 대시보드를 제공합니다. 설치된 어플리케이션을 이용하는 데 로그인이나 권한 등이 필요하지 않습니다. 대신 신규 사용자 모두를 위한 데모 ID가 제공됩니다. 각 데모 ID마다 Logistics Wizard의 환경이 따로 제공되며, 비즈니스 사용자와 물류 센터, 소매 센터, 수송은 기본값으로 설정됩니다. [안내](WALKTHROUGH.md)를 참조하여 역량을 확인해 보세요.
 
-* [logistics-wizard-recommendation][recommendation_github_url] - 현재 날씨 상태에 기초한 수송 권고안을 만들어줍니다. 현재 날씨 상태를 받고 주어진 날씨 이벤트에 따라 새로운 수송 권고를 만드는 Bluemix OpenWhisk의 집합입니다. 이 권고는 실제 오더로 바뀔 수 있습니다.
+* [logistics-wizard-recommendation][recommendation_github_url] - 현재 날씨에 기초한 수송 추천안을 만들어줍니다. 현재 날씨 상태를 받고 주어진 날씨 이벤트에 따라 새로운 수송 추천안을 만드는 Bluemix OpenWhisk 셋입니다. 이 추천안은 실제 오더로 바뀔 수 있습니다.
 
-* [logistics-wizard-controller][controller_github_url] - 서비스 간 상호 작용을 제어하는 메인 컨트롤러입니다. 사용자 인터페이스로부터 요청을 받아 ERP나 날씨 권고 모듈로 전달해줍니다.
+* [logistics-wizard-controller][controller_github_url] - 서비스 간 상호 작용을 제어하는 메인 컨트롤러입니다. 사용자 인터페이스로부터 요청을 받아 ERP나 날씨 추천 모듈로 전달해줍니다.
 
 ![아키텍쳐 도표](architecture.png)
 
