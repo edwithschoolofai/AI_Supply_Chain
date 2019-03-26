@@ -42,6 +42,9 @@ Logistics Wizard는 ERP 시스템이 돌아가고 있는 환경을 시뮬레이�
 
 [위키](https://github.com/IBM-Cloud/logistics-wizard/wiki)를 방문하여 Logistics Wizard 아키텍쳐와 설치 전략에 대해 자세히 알아보세요.
 
+## IPython 
+[ 코드 돌려보기 (Colab) ](https://colab.research.google.com/github/edwithschoolofai/AI_Supply_Chain/blob/master/AI%20for%20Supply%20Chains.ipynb) 
+
 ## 관련 블로그 포스트, 비디오 등
 
 - [Microservices on Bluemix: A multi-compute approach using Cloud Foundry and OpenWhisk](https://www.ibm.com/blogs/bluemix/2017/02/microservices-multi-compute-approach-using-cloud-foundry-openwhisk/)
